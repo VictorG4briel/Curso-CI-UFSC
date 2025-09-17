@@ -15,12 +15,12 @@ def juncaoAditiva():
     u=0
     for i in range(len(X)):
         M=W[i] 
-        if (W[i]<0.6):
-            M=W[i] + 0.6
+        if (W[i]<0.5):
+            M=W[i] + 0.5
 
         N=X[i]
-        if (X[i]<0.6):
-            N=X[i] + 0.6
+        if (X[i]<0.5):
+            N=X[i] + 0.5
         v=N*M
         u=u+v
     u=u-b
