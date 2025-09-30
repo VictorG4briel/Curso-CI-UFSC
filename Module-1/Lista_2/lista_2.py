@@ -185,3 +185,87 @@ else:
     print("Total de desconto: 0")
     print("Total de desconto:")
     print(f"Salario liquido: {salario_liquido}")
+
+
+#13. faça um programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar
+#outro valor deve aparecer valor inválido
+
+dias_semana =["Segunta" ,"Terça","Quarta","Quinta","Sexta","Sábado","Domingo"]
+numero=int(input("Digite um número de 1 a 7: "))
+if 1<= numero <=7:
+    print(dias_semana[numero - 1])
+else:
+    print("Valor inválido")
+
+#14. Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um 
+#semestre, e calcule a sua média.A atribuição de conceitos obedece à tabela abaixo:
+#O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o
+#conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E
+
+notas=[]
+for i in range(2):
+    nota=float(input(f"Digite a nota da {i+1}º prova:"))
+    notas.append(nota)
+media = sum(notas)/len(notas)
+if (9<media <=10):
+    conceito = 'A'
+elif (7.5<media<=9):
+    conceito = 'B'
+elif (6.0<media<=7.5):
+    conceito = 'C' 
+elif(4<media<=6):
+    conceito = 'D' 
+else:
+    conceito = 'E'
+
+status = "APROVADO" if conceito in ['A', 'B', 'C'] else "REPROVADO"
+print(f"Notas: {notas[0]}, {notas[1]}")
+print(f"Media:{media}")
+print(f"Conceito:{conceito}")
+print(f"Resultado:{status}")
+
+#15Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um
+#triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+#Dicas:
+#Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+#Triângulo Equilátero: três lados iguais;
+#Triângulo Isósceles: quaisquer dois lados iguais;
+#Triângulo Escaleno: três lados diferentes;
+
+lado1 = float(input("Digite o valor do primeiro lado do triângulo: "))
+lado2 = float(input("Digite o valor do segundo lado do triângulo: "))
+lado3 = float(input("Digite o valor do terceiro lado do triângulo: "))
+
+if (lado1<lado2 + lado3)and (lado2<lado1 +lado3)and(lado3<lado1+lado2):
+    print("Os valores fomam um triangulo!")
+    if lado1 == lado2 == lado3:
+        print("Triangulo Equilatero")
+    elif (lado3==lado1) or (lado3==lado2) or (lado1==lado2):
+        print("Triangulo Isóceles")
+    else:
+        print("Triangulo Escaleno")
+else:
+    print("Os valores não fomam um triangulo")
+
+#16.Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá
+#pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
+
+import math 
+
+a=float(input("digite o valor de 'A':"))
+b=float(input("digite o valor de 'B'':"))
+c=float(input("digite o valor de 'C':"))
+
+delta=b**2 - 4*a*c
+if (a == 0):
+    print("Essa equação não é do segundo grau")
+else:
+    if (delta<0):
+        print("Esse equação não possui raizes reais")
+    elif (delta == 0):
+        x = -b/(2*a)
+        print(f"Essa equação possui apenas uma raiz:{x}")
+    else:
+        x1=(-(b)- math.sqrt(delta))
+        x2=(-(b) + math.sqrt(delta))
+        print(f"As raízes da equação são: x1 = {x1}, x2 = {x2}")    
