@@ -268,4 +268,77 @@ else:
     else:
         x1=(-(b)- math.sqrt(delta))
         x2=(-(b) + math.sqrt(delta))
-        print(f"As raízes da equação são: x1 = {x1}, x2 = {x2}")    
+        print(f"As raízes da equação são: x1 = {x1}, x2 = {x2}") 
+
+#17. Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou
+#não bissexto.
+
+ano=int(input("Digite o ano:"))
+
+if (ano % 400 == 0) or (ano % 4 == 0 and ano % 100 != 0):
+    print("O ano é bissexto")
+else:
+    print("O ano não é bissexto")   
+
+#18. Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida
+
+dia=int(input("Digite o dia:"))
+mes=int(input("Digite o mes:"))
+ano=int(input("digite o ano:"))
+
+def bissexto(ano):
+    return (ano % 400 == 0) or (ano % 4 == 0 and ano % 100 != 0)
+
+valido=True
+
+if (1>mes) or (mes>12):
+    valido=False
+elif (mes==2):
+    if bissexto(ano):
+        if (dia <1) or (dia>29):
+            valido=False
+    else:
+        if (dia < 1) or (dia> 28):
+            valido=False
+elif (mes in [4,6,9,11]):
+    if dia < 1 or dia>30:
+        valido = False   
+else:
+    if dia<1 or dia>30:
+        vlida=False
+
+if valido:
+    print(f"A data {dia:02d}/{mes:02d}/{ano} é válida")
+else:
+    print(f"A data {dia:02d}/{mes:02d}/{ano} é inválida")
+
+#19.Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades
+#do mesmo
+
+numero=int(input("Digite um numero entre 1 e 1000:"))
+
+if (numero >1000) or (numero)<1:
+    print("Digite um valor dentro do intervalo")
+else:
+    unidade=numero % 10
+    dezena=(numero // 10) % 10
+    centena=(numero // 100)% 10
+
+print(f"{numero} = {centena} centenas ,{dezena} dezenas e {unidade} unidades")
+
+
+#20. Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno
+#e presentar
+
+notas=[]
+for i in range(3):
+    nota=float(input(f"Digite a nota da {i+1}º prova:"))
+    notas.append(nota)
+media=sum(notas)/len(notas)
+
+if (media==10):
+    print(f"APROVADO com Distinção com media:{media}")
+elif (7<=media<10):
+    print(f"APROVADO com media:{media}")
+else:
+    print(f"REAPROVADO com media:{media}")
