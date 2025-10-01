@@ -342,3 +342,59 @@ elif (7<=media<10):
     print(f"APROVADO com media:{media}")
 else:
     print(f"REAPROVADO com media:{media}")
+
+#21.Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar
+#quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é
+#de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na
+#máquina
+def caixa_eletronico():
+    valor = int(input("Digite o valor para saque (mínimo R$10 e máximo R$600): "))
+    if valor < 10 or valor > 600:
+        print("Valor inválido. O saque deve estar entre R$10 e R$600.")
+        return
+
+    notas100 = valor // 100
+    resto = valor % 100
+    
+    notas50 = resto // 50
+    resto = resto % 50
+
+    notas10 = resto // 10
+    resto = resto % 10
+
+    notas5 = resto // 5
+    resto = resto % 5
+
+    notas1 = resto
+
+    print("\nDistribuição das notas:")
+    if notas100 > 0:
+        print(f"{notas100} nota(s) de R$100")
+    if notas50 > 0:
+        print(f"{notas50} nota(s) de R$50")
+    if notas10 > 0:
+        print(f"{notas10} nota(s) de R$10")
+    if notas5 > 0:
+        print(f"{notas5} nota(s) de R$5")
+    if notas1 > 0:
+        print(f"{notas1} nota(s) de R$1")
+
+
+caixa_eletronico()
+
+#22. Faça um Programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da
+#divisão)
+numero=int(input("Digite um numero:"))
+if (numero % 2 ==0):
+    print(f"O numero {numero} é par")
+else:
+    print(f"O numero {numero} é impar")
+
+#23. Faça um Programa que peça um número e informe se o número é inteiro ou decimal. 
+# Dica: utilize uma função de arredondamento
+numero=float(input("Digite um numero:"))
+
+if (numero == round(numero)):
+    print(f"O numero {numero} é inteiro")
+else:
+    print(f"O numero {numero} é decimal")
