@@ -8,7 +8,7 @@ from Saving_Account import SavingsAccount
 
 # Client Instance
 client = Client(
-    name="João",
+    name="joão",
     cpf=12345678901,
     address="Rua das Amoras",
     address_number=16,
