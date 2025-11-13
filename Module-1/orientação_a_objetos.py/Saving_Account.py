@@ -1,14 +1,8 @@
-# Savings Account Class
-
-# Imports
-from account import Account
-
 # Class
-class SavingsAccount(Account):
+class SavingsAccount():
     # Constructor
-    def __init__(self, agency,agency_dig,code, account_number, account_dig, balance):
-        # Constructor Super Class
-        super().__init__(agency,agency_dig,code)
+    def __init__(self, account_number, account_dig, balance):
+
         # Atributes Privates
         self.__account_number = account_number
         self.__account_dig = account_dig
@@ -49,7 +43,8 @@ class SavingsAccount(Account):
             f"Saldo: {self.__balance}"
         )
 
-    def update_balance(self):
-        # yield of 1% per month
-        self.__balance *= 1.01
-        print("Conta Poupança atualizada: rendimento de 1% aplicado")
+# Instances
+savingsAccount=SavingsAccount(27346,3,456)
+
+# Exit
+print(savingsAccount)
