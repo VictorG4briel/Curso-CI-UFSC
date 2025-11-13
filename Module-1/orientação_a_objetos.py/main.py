@@ -1,20 +1,21 @@
-#main.py
-from classes import Client 
+# main.py
+
+# Imports
+from classes import Client
 from account import Account
 from Checking_Account import CheckingAccount
 from Saving_Account import SavingsAccount
 
-
-#client intance
-client = Client( 
-    name="victor",
-    cpf= 11498756790,
-    address="Rua sebastiano",
-    address_number= 190,
-    address_complement="Apartamento",
-    dt_birth="28/04/2000",
-    phone="(48)9 96574655",
-    email="Victorg2809@hotmail.com"
+# Client Instance
+client = Client(
+    name="João",
+    cpf=12345678901,
+    address="Rua das Amoras",
+    address_number=16,
+    address_complement= "Apartamento",
+    dt_birth="12/02/1980",
+    phone="55+ (48) 9 2837-2746",
+    email="joao@gmail"
 )
 
 # CheckingAccount Instance
