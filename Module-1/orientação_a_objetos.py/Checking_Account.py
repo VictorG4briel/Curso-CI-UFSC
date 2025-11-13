@@ -51,5 +51,5 @@ checking_account = CheckingAccount(1234, 5, 100, 4499, 5, 0)
 # Chamar o método na instância (não na classe) para que 'self' seja passado automaticamente.
 checking_account.update_balance()
 
-print(checking_account)
+
 
