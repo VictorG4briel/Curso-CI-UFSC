@@ -101,13 +101,3 @@ client = Client("João", 23745678901,
                 "12/01/1980", "(48) 9 8472-4738", "joao@gmail.com")
 
 # Exit
-print(client.name)
-print(client.cpf)
-print(client.address)
-print(client.address_number)
-print(client.address_complement)
-print(client.dt_birth)
-print(client.phone)
-print(client.email)
-print("===========")
-print(client)
