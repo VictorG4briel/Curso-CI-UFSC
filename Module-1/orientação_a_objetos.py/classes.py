@@ -96,8 +96,6 @@ class Client():
         )
 
 # Instances
-client = Client("João", 23745678901,
-                "Rua das Orquídeas", 59, "Apto 102",
-                "12/01/1980", "(48) 9 8472-4738", "joao@gmail.com")
+
 
 # Exit
