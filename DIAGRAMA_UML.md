@@ -1,6 +1,6 @@
 # 📐 Diagrama UML - Sistema de RPG
 
-## Diagrama de Classes (Notação UML)
+# Diagrama de Classes 
 
 ```
 ┌────────────────────────────────────┐
